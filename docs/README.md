@@ -22,15 +22,17 @@ Incompleted, coming soon.
 
 Reference Book: Royden Real Analysis 4th edition.
 
-[Incompleted Version](https://apolloniussun.github.io/realanalysis.md)
+[Incompleted Version](https://apolloniussun.github.io/#/RealAnalysis)
 
 
 
 ## Lecture Notes - 2023 Spring
 
-**Analysis 0-H : Gu ChenLin. ** [Sketch Version](https://apolloniussun.github.io/#/analysis0h)
 
-**Algebra 0-H : Qiu Yu. ** [Sketch Version](https://apolloniussun.github.io/#/algebra0h)
+
+**Analysis 0H : Gu ChenLin. ** [Sketch Version](https://apolloniussun.github.io/#/Analysis0H)
+
+**Algebra 0H : Qiu Yu. ** [Sketch Version](https://apolloniussun.github.io/#/Algebra0H)
 
 **Algebraic Number Theory : Duan ZheFan.** [Sketch Version](https://apolloniussun.github.io/#/ANTdzf)
 
