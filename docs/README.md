@@ -30,9 +30,9 @@ Reference Book: Royden Real Analysis 4th edition.
 
 
 
-**Analysis 0H : Gu ChenLin. ** [Sketch Version](https://apolloniussun.github.io/#/Analysis0H)
+**Analysis 0H : Gu ChenLin.** [Sketch Version](https://apolloniussun.github.io/#/Analysis0H)
 
-**Algebra 0H : Qiu Yu. ** [Sketch Version](https://apolloniussun.github.io/#/Algebra0H)
+**Algebra 0H : Qiu Yu.** [Sketch Version](https://apolloniussun.github.io/#/Algebra0H)
 
 **Algebraic Number Theory : Duan ZheFan.** [Sketch Version](https://apolloniussun.github.io/#/ANTdzf)
 
