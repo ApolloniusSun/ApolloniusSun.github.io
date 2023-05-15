@@ -11,8 +11,14 @@
   <script>
     window.$docsify = {
       //...
+    latex: {
+    inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
+    displayMath  : [['$$', '$$']],               // default
     }
+    };
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
 </body>
 </html>
