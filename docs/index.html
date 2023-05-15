@@ -14,16 +14,18 @@
     latex: {
     inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
     displayMath  : [['$$', '$$']],               // default
-    customOptions:{
-        loader: {load: ['ui/lazy','[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}},
-        tex: {
-        packages: {'[+]': ['xypic']}
-        },
-    }
+    //customOptions:{
+    //    loader: {load: ['ui/lazy','[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}},
+    //    tex: {
+    //    packages: {'[+]': ['xypic']}
+    //    },
+    //}
+    // Note: <!script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js">
     };
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
   <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
 
 </body>
