@@ -640,9 +640,9 @@ $3\to 1:$ 幂零根是极大理想，且为全体素理想的交，于是只能�
 
 
 
-**16.（例）$Spec(\Z),Spec(\R),Spec(\C[x]),Spec(\R[x]),Spec(\Z[x])$**
+**16.（例）$Spec(\mathbb{Z}),Spec(\mathbb{R}),Spec(\mathbb{C}[x]),Spec(\mathbb{R}[x]),Spec(\mathbb{Z}[x])$**
 
-$Spec(\Z)$为全体$p_i\Z$构成的集合，其中的闭集为全体$p\Z$以及$\varnothing$和$Spec(\Z)$
+$Spec(\mathbb{Z})$为全体$p_i\mathbb{Z}$构成的集合，其中的闭集为全体$p\mathbb{Z}$以及$\varnothing$和$Spec(\mathbb{Z})$
 
 $Spec(\R)=\{(0)\}$，于是闭集只能为$(0),\varnothing$
 
@@ -997,7 +997,7 @@ $a(1-a-ab)u=a\implies a(bu)=a\implies ab=a\implies a\leq b$
 
 **26.（极大谱） 环$A$中$Spec(A)$有由全体极大理想构成的子空间，其上的拓扑定义为继承的子空间拓扑，称为极大谱，记为$Max(A)$，很显然极大谱没有1.E21中那样好的性质，因为极大理想拉回并不一定是极大理想。**
 
-**（函数环）$X$是紧Hausdorff空间，$C(X)$是其上所有实值连续函数构成的环。对于每一点$x\in X$，取$\mathfrak{m}_x$为$C(X)$中全体在该点取值为0的函数构成的集合。这个理想$\mathfrak{m}_x$是一个极大理想，因为考虑赋值函数$C(X)\to \R:f\mapsto f(x)$，这个理想是环同态的核，而像集是域$\R$。**
+**（函数环）$X$是紧Hausdorff空间，$C(X)$是其上所有实值连续函数构成的环。对于每一点$x\in X$，取$\mathfrak{m}_x$为$C(X)$中全体在该点取值为0的函数构成的集合。这个理想$\mathfrak{m}_x$是一个极大理想，因为考虑赋值函数$C(X)\to \mathbb{R}:f\mapsto f(x)$，这个理想是环同态的核，而像集是域$\mathbb{R}$。**
 
 **记$\widetilde{X}=Max(C(X))$，我们有了一个映射$\mu:X\to\widetilde{X}:x\mapsto \mathfrak{m}_x$**
 
@@ -1318,7 +1318,7 @@ Rmk. 自行回想同调代数中的例子。
 
 **（2.12: 张量积）$A-$模$M,N$的张量积被定义为一个偶对$(T,g)$。其中$T$是一个$A-$模，$g:M\times N\to T$是双线性映射，满足泛性质：**
 
-$\xymatrix{M\times N\ar[r]^-g\ar[dr]_{\forall f}& T\ar@{-->}[d]|{\exists !}\\&P}$
+$\begin{xy}\xymatrix{M\times N\ar[r]^-g\ar[dr]_{\forall f}& T\ar@{-->}[d]|{\exists !}\\&P}\end{xy}$
 
 **那么张量积存在，并且在同构意义下唯一。**
 
@@ -1326,7 +1326,7 @@ $\xymatrix{M\times N\ar[r]^-g\ar[dr]_{\forall f}& T\ar@{-->}[d]|{\exists !}\\&P}
 
 唯一性显然：
 
-$\xymatrix{M\times N\ar[r]^-g\ar[rd]_{g'}& T\ar@<.5ex>[d]^f\\&T'\ar@<.5ex>[u]^{f'}}$
+$\begin{xy}\xymatrix{M\times N\ar[r]^-g\ar[rd]_{g'}& T\ar@<.5ex>[d]^f\\&T'\ar@<.5ex>[u]^{f'}}\end{xy}$
 
 存在性只需要考虑全体$\sum_{finite} a_i(x_i,y_i)$形式的元素构成的模$C$（完全自由），然后商去全体$(x+x',y)-(x,y)-(x',y);(x.y+y')-(x,y)-(x,y')\\(ax,y)-a(x,y);(x,ay)-a(x,y)$生成的子模$D$
 
@@ -1372,7 +1372,7 @@ Note：**(2.13 alt.) 在子模$M_0,N_0$的情况中，如果在$M_0\otimes N_0$�
 
 多重张量积也可以同样由多重线性映射构造得到（完全类似的泛性质）
 
-$\xymatrix{M_1\times\cdots\times M_r\ar[r]^-g\ar[dr]_{\forall f}& T\ar@{-->}[d]|{\exists !}\\&P}$
+$\begin{xy}\xymatrix{M_1\times\cdots\times M_r\ar[r]^-g\ar[dr]_{\forall f}& T\ar@{-->}[d]|{\exists !}\\&P}\end{xy}$
 
 
 
@@ -1420,7 +1420,7 @@ $\xymatrix{M_1\times\cdots\times M_r\ar[r]^-g\ar[dr]_{\forall f}& T\ar@{-->}[d]|
 
 自然地，模同态之间也有张量积：$f\otimes g(x\otimes y)=f(x)\otimes g(y)$
 
-$\xymatrix{M\ar[d]\ar[r]^-f\ar@/^1.5pc/[rr]^{f'\circ f}& M'\ar[d]\ar[r]^-{f'}&M''\ar[d]\\M\otimes N\ar@/_1pc/[rr]_{(f'\circ f)\otimes (g'\circ g)}\ar[r]^-{f\otimes g} & M'\otimes N'\ar[r]^-{f'\otimes g'} &M''\otimes N''\\N\ar@/_1.5pc/[rr]_{g'\circ g}\ar[u]\ar[r]^-g&N'\ar[u]\ar[r]^-{g'}&N''\ar[u]}$
+$\begin{xy}\xymatrix{M\ar[d]\ar[r]^-f\ar@/^1.5pc/[rr]^{f'\circ f}& M'\ar[d]\ar[r]^-{f'}&M''\ar[d]\\M\otimes N\ar@/_1pc/[rr]_{(f'\circ f)\otimes (g'\circ g)}\ar[r]^-{f\otimes g} & M'\otimes N'\ar[r]^-{f'\otimes g'} &M''\otimes N''\\N\ar@/_1.5pc/[rr]_{g'\circ g}\ar[u]\ar[r]^-g&N'\ar[u]\ar[r]^-{g'}&N''\ar[u]}\end{xy}$
 
 当然也有$(f'\circ f)\otimes (g'\circ g)=(f'\otimes g')\circ(f\otimes g)$
 
@@ -1474,19 +1474,19 @@ $Hom(M\otimes N,P)\cong Hom(M,Hom(N,P))$（回想一下双线性映射的定义�
 
 **（2.18: 张量函子的右正合性）**
 
-**$\xymatrix{M'\ar[r]^f& M\ar[r]^g&M''\ar[r]&0}$是$A-$模的正合列，那么：**
+**$\begin{xy}\xymatrix{M'\ar[r]^f& M\ar[r]^g&M''\ar[r]&0}\end{xy}$是$A-$模的正合列，那么：**
 
-**$\xymatrix{M'\otimes N\ar[r]^{f\otimes 1}& M\otimes N\ar[r]^{g\otimes 1}&M''\otimes N\ar[r]&0}$也是正合列。**
+**$\begin{xy}\xymatrix{M'\otimes N\ar[r]^{f\otimes 1}& M\otimes N\ar[r]^{g\otimes 1}&M''\otimes N\ar[r]&0}\end{xy}$也是正合列。**
 
 证：
 
 利用同态函子的左正合性：
 
-$\xymatrix{0\ar[r]&Hom(M'',Hom(N,P))\ar[r]&Hom(M,Hom(N,P))\ar[r]&Hom(M',Hom(N,P))}$正合，于是：
+$\begin{xy}\xymatrix{0\ar[r]&Hom(M'',Hom(N,P))\ar[r]&Hom(M,Hom(N,P))\ar[r]&Hom(M',Hom(N,P))}\end{xy}$正合，于是：
 
-$\xymatrix{0\ar[r]&Hom(M''\otimes N,P)\ar[r]&Hom(M\otimes N,P)\ar[r]&Hom(M'\otimes N,P)}$正合。
+$\begin{xy}\xymatrix{0\ar[r]&Hom(M''\otimes N,P)\ar[r]&Hom(M\otimes N,P)\ar[r]&Hom(M'\otimes N,P)}\end{xy}$正合。
 
-由于$P$的选取是任意的，利用同态函子的左正合性：$\xymatrix{M'\otimes N\ar[r]^{f\otimes 1}& M\otimes N\ar[r]^{g\otimes 1}&M''\otimes N\ar[r]&0}$是正合的。
+由于$P$的选取是任意的，利用同态函子的左正合性：$\begin{xy}\xymatrix{M'\otimes N\ar[r]^{f\otimes 1}& M\otimes N\ar[r]^{g\otimes 1}&M''\otimes N\ar[r]&0}\end{xy}$是正合的。
 
 
 
@@ -1600,7 +1600,7 @@ $D$在这个乘法下构成了交换幺环是因为取零元$0\otimes 0$，幺�
 
 事实上有交换图：
 
-$\xymatrix{&B\ar[rd]^u&\\A\ar[dr]_g\ar[ur]^f&&D\\&C\ar[ur]_v}$，其中$u(b):=b\otimes 1$.
+$\begin{xy}\xymatrix{&B\ar[rd]^u&\\A\ar[dr]_g\ar[ur]^f&&D\\&C\ar[ur]_v}\end{xy}$，其中$u(b):=b\otimes 1$.
 
 由于 $u\circ f(a)=f(a)\otimes 1$, $v\circ g(a)=1\otimes g(a)$
 
@@ -1640,7 +1640,7 @@ $\mathfrak a\to A\to A/\mathfrak a\to 0$
 
 有正合列：
 
-$\xymatrix{\mathfrak a\otimes_A M\ar[r]&A\otimes_A M\ar[r]&(A/\mathfrak a)\otimes_A M\ar[r]&0}$
+$\begin{xy}\xymatrix{\mathfrak a\otimes_A M\ar[r]&A\otimes_A M\ar[r]&(A/\mathfrak a)\otimes_A M\ar[r]&0}\end{xy}$
 
 而第二项正是$M$，因此只需说明$\mathfrak a\otimes_A M\cong \mathfrak aM$
 
@@ -1728,7 +1728,7 @@ $B\otimes_A T\to B\otimes_A T'$是单的，于是$N\otimes_B(B\otimes_AT)\to N\o
 
 
 
-**9. 给定$A-$模正合列$\xymatrix{0\ar[r]&M'\ar[r]^f&M\ar[r]^g&M''\ar[r]&0}$，$M',M''$有限生成，则$M$有限生成。**
+**9. 给定$A-$模正合列$\begin{xy}\xymatrix{0\ar[r]&M'\ar[r]^f&M\ar[r]^g&M''\ar[r]&0}\end{xy}$，$M',M''$有限生成，则$M$有限生成。**
 
 证：
 
@@ -1832,7 +1832,7 @@ $B\otimes_A T\to B\otimes_A T'$是单的，于是$N\otimes_B(B\otimes_AT)\to N\o
 
 （事实上，良定义可以由2.E15.2直接推出）
 
-$\xymatrix{M_i\ar[r]^{\mu_{ik}}\ar@/_/[rdd]\ar@/^/[rd]_{\mu_i'}&M_k&M_j\ar[l]_{\mu_{jk}}\ar@/_/[ld]^{\mu_{j}'}\ar@/^/[ldd]\\&M&\\&N&}$
+$\begin{xy}\xymatrix{M_i\ar[r]^{\mu_{ik}}\ar@/_/[rdd]\ar@/^/[rd]_{\mu_i'}&M_k&M_j\ar[l]_{\mu_{jk}}\ar@/_/[ld]^{\mu_{j}'}\ar@/^/[ldd]\\&M&\\&N&}\end{xy}$
 
 
 
@@ -1876,7 +1876,7 @@ $\xymatrix{M_i\ar[r]^{\mu_{ik}}\ar@/_/[rdd]\ar@/^/[rd]_{\mu_i'}&M_k&M_j\ar[l]_{\
 
 只需注意到$N$上也有映射族$\nu_i\circ\phi_i$满足泛性质的要求：下图的实线箭头均交换。于是存在唯一的映射$\phi$满足下图的虚线箭头加入后仍然交换。
 
-$\xymatrix{M_i\ar[rr]^{\mu_{ij}}\ar[rd]_{\mu_i}\ar[ddd]_{\phi_i}&&M_j\ar[ld]^{\mu_j}\ar[ddd]^{\phi_j}\\&M\ar@{-->}@/^0.5pc/[ddd]^{\exist!\phi}&\\\\N_i\ar[rr]^{\nu_{ij}}\ar[rd]_{\nu_i}&&N_j\ar[ld]^{\nu_j}\\&N&}$
+$\begin{xy}\xymatrix{M_i\ar[rr]^{\mu_{ij}}\ar[rd]_{\mu_i}\ar[ddd]_{\phi_i}&&M_j\ar[ld]^{\mu_j}\ar[ddd]^{\phi_j}\\&M\ar@{-->}@/^0.5pc/[ddd]^{\exist!\phi}&\\\\N_i\ar[rr]^{\nu_{ij}}\ar[rd]_{\nu_i}&&N_j\ar[ld]^{\nu_j}\\&N&}\end{xy}$
 
 
 
@@ -1886,7 +1886,7 @@ $\xymatrix{M_i\ar[rr]^{\mu_{ij}}\ar[rd]_{\mu_i}\ar[ddd]_{\phi_i}&&M_j\ar[ld]^{\m
 
 证：
 
-$\xymatrix{M_i\ar[rr]^{\mu_{ij}}\ar[rd]_{\mu_i}\ar[ddd]_{\phi_i}&&M_j\ar[ld]^{\mu_j}\ar[ddd]^{\phi_j}\\&M\ar@/^0.5pc/[ddd]^{\phi}&\\\\N_i\ar[rr]^{\nu_{ij}}\ar[rd]_{\nu_i}\ar[ddd]_{\psi_i}&&N_j\ar[ld]^{\nu_j}\ar[ddd]^{\psi_j}\\&N\ar@/_0.5pc/[ddd]_{\psi}&\\\\P_i\ar[rd]_{\pi_i}\ar[rr]^{\pi_{ij}}&&P_j\ar[ld]^{\pi_j}\\&P&}$
+$\begin{xy}\xymatrix{M_i\ar[rr]^{\mu_{ij}}\ar[rd]_{\mu_i}\ar[ddd]_{\phi_i}&&M_j\ar[ld]^{\mu_j}\ar[ddd]^{\phi_j}\\&M\ar@/^0.5pc/[ddd]^{\phi}&\\\\N_i\ar[rr]^{\nu_{ij}}\ar[rd]_{\nu_i}\ar[ddd]_{\psi_i}&&N_j\ar[ld]^{\nu_j}\ar[ddd]^{\psi_j}\\&N\ar@/_0.5pc/[ddd]_{\psi}&\\\\P_i\ar[rd]_{\pi_i}\ar[rr]^{\pi_{ij}}&&P_j\ar[ld]^{\pi_j}\\&P&}\end{xy}$
 
 对于$m\in M$，设$m=\mu_i(m_i)$，那么$\psi\circ\phi(m)=\pi_i\circ\psi_i\circ\phi_i(m)=0$
 
@@ -1912,7 +1912,7 @@ $\xymatrix{M_i\ar[rr]^{\mu_{ij}}\ar[rd]_{\mu_i}\ar[ddd]_{\phi_i}&&M_j\ar[ld]^{\m
 
 
 
-$\xymatrix{&\varinjlim(M_i\times N)\ar[ld]_g&\\\varinjlim(M_i\otimes N)\ar@<0.5ex>[r]^\psi&M\otimes N\ar@<0.5ex>[l]^\phi&M_i\times N\ar[ld]^{g_i}\ar@{~>}[lu]_{}\\&M_i\otimes N\ar@{~>}[ul]^{\mu_i^*}\ar[u]|{\mu_i\otimes 1}&}$
+$\begin{xy}\xymatrix{&\varinjlim(M_i\times N)\ar[ld]_g&\\\varinjlim(M_i\otimes N)\ar@<0.5ex>[r]^\psi&M\otimes N\ar@<0.5ex>[l]^\phi&M_i\times N\ar[ld]^{g_i}\ar@{~>}[lu]_{}\\&M_i\otimes N\ar@{~>}[ul]^{\mu_i^*}\ar[u]|{\mu_i\otimes 1}&}\end{xy}$
 
 同样由于存在$M_i\times N\to M_i\otimes N$的双线性映射（如图），于是诱导出了双线性映射$g:\varinjlim(M_i\times N)\to \varinjlim (M_i\otimes N)$。而$\varinjlim (M_i\times N)=(\varinjlim M_i)\times N$（考虑直和商去某些关系这个定义），由张量积的性质，这诱导出了$\phi:(\varinjlim M_i)\otimes N\to \varinjlim(M_i\otimes N)$
 
@@ -2030,7 +2030,7 @@ $1\implies 2$
 
 但另一方面考虑自然同态构成的交换图（很容易验证交换性）：
 
-$\xymatrix{(x)\otimes A\ar[r]\ar[d]\ar@{-->}[rd]&(x)\otimes A/(x)\ar[d]\\A\ar[r]&A/(x)}$
+$\begin{xy}\xymatrix{(x)\otimes A\ar[r]\ar[d]\ar@{-->}[rd]&(x)\otimes A/(x)\ar[d]\\A\ar[r]&A/(x)}\end{xy}$
 
 注意到$(x)\otimes A\to A/(x)$的像只有$0$。而由右侧箭头单，$(x)\otimes A\longrightarrow (x)\otimes A/(x)$的像只能为0.
 
@@ -2098,7 +2098,7 @@ $3\implies 1$
 
 **3.1（分式环的泛性质）对于每个将$S$中元素映为单位的环同态$g:A\to B$，存在唯一的环同态$h:S^{-1}A\to B$使得$g=h\circ f$**
 
-$\xymatrix{A\ar[r]^f\ar[rd]_{\forall g}&S^{-1}A\ar@{-->}[d]|{\exists ! h}\\&B}$
+$\begin{xy}\xymatrix{A\ar[r]^f\ar[rd]_{\forall g}&S^{-1}A\ar@{-->}[d]|{\exists ! h}\\&B}\end{xy}$
 
 证：若存在$h$，那么$h(1/s)=h((s/1)^{-1})=g(s)^{-1}$，于是$h(a/s)=g(a)\cdot g(s)^{-1}$被唯一确定了。
 
@@ -2174,7 +2174,7 @@ $f/1=g/1\iff\exists h\in C(X)-\mathfrak m_x,h(f-g)=0\iff\\\exists\ open\ neighbo
 
 **3.3pre （保持复合）每个模同态$u:M\to N$诱导了分式环的模同态$S^{-1}u:S^{-1}M\to S^{-1}N：m/s\mapsto u(m)/s$，那么$S^{-1}(v\circ u)=S^{-1}v\circ S^{-1}u$**
 
-**3.3 （正合性）$\xymatrix{M'\ar[r]^f& M\ar[r]^g&M''}$在$M$处正合，那么$\xymatrix{S^{-1}M'\ar[r]^{S^{-1}f}&S^{-1}M\ar[r]^{S^{-1}g}&S^{-1}M''}$在$S^{-1}M$处正合。**
+**3.3 （正合性）$\begin{xy}\xymatrix{M'\ar[r]^f& M\ar[r]^g&M''}\end{xy}$在$M$处正合，那么对应的分式环序列在$S^{-1}M$处正合。**
 
 证：$S^{-1}g\circ S^{-1}f=S^{-1}(g\circ f)=0\implies Im(S^{-1}f)\subseteq Ker(S^{-1}g)$
 
@@ -2206,7 +2206,7 @@ $f/1=g/1\iff\exists h\in C(X)-\mathfrak m_x,h(f-g)=0\iff\\\exists\ open\ neighbo
 
 （反向包含显然）
 
-3.4.3 对正合列$\xymatrix{0\ar[r]&N\ar[r]&M\ar[r]&M/N\ar[r]&0}$作用$S^{-1}$即可。
+3.4.3 对正合列$\begin{xy}\xymatrix{0\ar[r]&N\ar[r]&M\ar[r]&M/N\ar[r]&0}\end{xy}$作用$S^{-1}$即可。
 
 
 
@@ -2232,9 +2232,9 @@ $\sum (a_i/s_i)\otimes_A m_i=\sum (a_it_i)/s\otimes_A m_i=1/s\otimes_A \sum a_it
 
 **3.6 （局部化是平坦化）$S^{-1}A$是平坦$A-$模。**
 
-结合3.3，3.5，2.19：任给$A-$模正合列$\xymatrix{0\ar[r]&M\ar[r]&N\ar[r]&P\ar[r]&0}$
+结合3.3，3.5，2.19：任给$A-$模正合列$\begin{xy}\xymatrix{0\ar[r]&M\ar[r]&N\ar[r]&P\ar[r]&0}\end{xy}$
 
-$\xymatrix{0\ar[r]&S^{-1}A\otimes_A M\ar[r]&S^{-1}A\otimes_A N\ar[r]&S^{-1}A\otimes_AP\ar[r]&0\\&&\cong\\0\ar[r]&S^{-1}M\ar[r]&S^{-1}N\ar[r]&S^{-1}P\ar[r]&0}$
+$\begin{xy}\xymatrix{0\ar[r]&S^{-1}A\otimes_A M\ar[r]&S^{-1}A\otimes_A N\ar[r]&S^{-1}A\otimes_AP\ar[r]&0\\&&\cong\\0\ar[r]&S^{-1}M\ar[r]&S^{-1}N\ar[r]&S^{-1}P\ar[r]&0}\end{xy}$
 
 （后一正合列中模作为$S^{-1}A-$模，且映射正是如同3.3中那样）
 
@@ -2290,9 +2290,9 @@ $2\implies 3.$显然
 
 $3\implies 1.$
 
-设$M'=Ker(\phi)$，有正合列$\xymatrix{0\ar[r]&M'\ar[r]&M\ar[r]&N}$
+设$M'=Ker(\phi)$，有正合列$\begin{xy}\xymatrix{0\ar[r]&M'\ar[r]&M\ar[r]&N}\end{xy}$
 
-那么$\xymatrix{0\ar[r]&M'_\mathfrak m\ar[r]&M_\mathfrak m\ar[r]&N_\mathfrak m}$正合，于是$M'_\mathfrak m=0 \ \forall\mathfrak m\ maximal$。于是由3.8，$M'=0$
+那么$\begin{xy}\xymatrix{0\ar[r]&M'_\mathfrak m\ar[r]&M_\mathfrak m\ar[r]&N_\mathfrak m}\end{xy}$正合，于是$M'_\mathfrak m=0 \ \forall\mathfrak m\ maximal$。于是由3.8，$M'=0$
 
 满射情况同理。
 
@@ -2676,7 +2676,7 @@ $X_\mathfrak p\cap X_\mathfrak q=\varnothing$
 
 **12.2 $f:M\to N$是模同态，那么$f(T(M))\subseteq T(N)$**
 
-**12.3 $T(-)$是左正合的，i.e. $\xymatrix{0\ar[r]&M'\ar[r]&M\ar[r]&M''}$正合，则$\xymatrix{0\ar[r]&T(M')\ar[r]&T(M)\ar[r]&T(M'')}$正合。**
+**12.3 $T(-)$是左正合的，i.e. 将左正合列映为左正合列。**
 
 **12.4 $T(M)$是映射$M\to K\otimes_A M:x\mapsto 1\otimes x$的核，其中$K$是$A$的分式域。**
 
@@ -2688,7 +2688,7 @@ $X_\mathfrak p\cap X_\mathfrak q=\varnothing$
 
 12.3 
 
-$\xymatrix{0\ar[r]&M'\ar[r]^f&M\ar[r]^g&M''}$
+$\begin{xy}\xymatrix{0\ar[r]&M'\ar[r]^f&M\ar[r]^g&M''}\end{xy}$
 
 限制到挠模上自然$\bar{f}$单射。$\overline{g}\circ \overline{f}=0$，只需证明$\ker \bar{g}\subseteq im \bar{f}$
 
@@ -2738,7 +2738,7 @@ $M_\mathfrak m$无挠$\implies S^{-1}T(M)=0$，但是无零因子保证了$m/s=0
 
 设这组生成元为$x_1,\cdots,x_n$，以及自然的基底$e_1,\cdots, e_n$。自然有模同态$\phi:F\to F:e_i\mapsto x_i$，这当然是一个满同态，接下来证明同构，即说明其为单同态。
 
-由定理3.9，可以假设$A$是局部环，$N=\ker\phi, k=A/\mathfrak m$。由于自由模$F$是平坦的，那么正合列$0\to N\to F\to F\to0$诱导出了张量正合列$\xymatrix{0\ar[r]&k\otimes N\ar[r]&k\otimes F\ar[r]^{1\otimes\phi}&k\otimes F\ar[r]&0}$ 
+由定理3.9，可以假设$A$是局部环，$N=\ker\phi, k=A/\mathfrak m$。由于自由模$F$是平坦的，那么正合列$0\to N\to F\to F\to0$诱导出了张量正合列$\begin{xy}\xymatrix{0\ar[r]&k\otimes N\ar[r]&k\otimes F\ar[r]^{1\otimes\phi}&k\otimes F\ar[r]&0}\end{xy}$ 
 
 由于$k\otimes F=k^n$是线性空间，$1\otimes\phi$满进而是单的，于是只能有$k\otimes N=0$。而$N$作为自由模的子模是有限生成的，那么由2.E3知$N=0$，从而得证。
 
@@ -2780,7 +2780,7 @@ $5\implies 1.$ 取$M=A/\mathfrak a$，即有单射$A/\mathfrak a\to B/\mathfrak 
 
 
 
-**17. $\xymatrix{A\ar[r]^f&B\ar[r]^g&C}$，如果$g\circ f$平坦，且$g$忠实平坦，那么$f$平坦。**
+**17. $\begin{xy}\xymatrix{A\ar[r]^f&B\ar[r]^g&C}\end{xy}$，如果$g\circ f$平坦，且$g$忠实平坦，那么$f$平坦。**
 
 证：
 
@@ -2794,7 +2794,7 @@ $5\implies 1.$ 取$M=A/\mathfrak a$，即有单射$A/\mathfrak a\to B/\mathfrak 
 
 但是考虑交换图：
 
-$\xymatrix{M'\otimes_AB\ar[r]\ar[d]&M\otimes_AB\ar[d]\\M'\otimes_AC\ar[r]&M\otimes_AC}$
+$\begin{xy}\xymatrix{M'\otimes_AB\ar[r]\ar[d]&M\otimes_AB\ar[d]\\M'\otimes_AC\ar[r]&M\otimes_AC}\end{xy}$
 
 由于$C$在$B$上忠实平坦，由3.E16.5：左、右、下三个映射都是单射，且这个图交换，于是只能有第四条边也是单射。
 
@@ -2936,7 +2936,7 @@ $\xymatrix{M'\otimes_AB\ar[r]\ar[d]&M\otimes_AB\ar[d]\\M'\otimes_AC\ar[r]&M\otim
 
 **23.4 $U\supseteq U'\supseteq U''$，则：**
 
-$\xymatrix{A(U)\ar[rr]\ar[rd]&&A(U'')\\&A(U')\ar[ru]}$交换。
+$\begin{xy}\xymatrix{A(U)\ar[rr]\ar[rd]&&A(U'')\\&A(U')\ar[ru]}\end{xy}$交换。
 
 **23.5 $x(=\mathfrak p)$是$X$中一点，则$\varinjlim_{U\ni x}A(U)\cong A_\mathfrak p$**
 
