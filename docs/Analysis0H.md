@@ -457,9 +457,13 @@ Following Contents are Real Analysis Parts.
 
 Examples. 1. $E=\mathbb{Z},\mathcal{F}=P(A),\mu(A)=|A|$; 
 
-$2. E=\mathbb{R},\mathcal{F}=Borel,\mu([a,b])=b-a$
+Caratheodory Construction.
 
-Existence: Caratheodory Construction.
+${\mu:\mathcal{S}\to [0,\infty]\atop{pre\ measure} }\longrightarrow{\mu^*:2^X\to [0,\infty]\atop outer\ measure}\stackrel{Caratheodory\ Condition}\longrightarrow {\bar{\mu}:\mathcal{M}=\mu^*-measurable\to [0,\infty]\atop{measure}}$
+
+Take the semi-ring $\mathcal{S}=bounded\ intervals,\mu\ map\ interval\ to \ its\ length$.
+
+Through this construction (and using some conclusions of Caratheodory-Hahn Thm.) we get a measure $\bar{\mu}$ (Actually a unique expension on $\mathcal M$) on $\mathcal{M}$, where $\mathcal{M}$ is a $\sigma$ algebra containing intervals. Thus $\mathcal{M}$ contains Borel sets.
 
 
 
@@ -494,3 +498,13 @@ If $(E_2,\mathcal{F_2})=(\mathbb{R},Borel)$, we usally call $f$ a $\mathcal{F_1}
 **1. $f\geq 0, \int_E f\text{d}\mu =\sup _{h\leq f,h\ simple} \int_E h\text{d}\mu$**
 
 **2. $\int_E f\text{d}\mu=\int_E f^+\text{d}\mu -\int_E f^-\text{d}\mu$**
+
+Remark. Say $f$ integrable if $\displaystyle{\int |f|\text{d}\mu<+\infty}$, then $\displaystyle{\int_E f^+,\int_E f^{-}<+\infty}$ 
+
+
+
+**Rimeann Integrable On Closed Interval $\implies$ Measurable and $\int_L=\int_R$**
+
+Proof: $\int_L=\int_R$ if we use step functions as the simple functions. Using Upper sums and Lower sums immediately leads to the result.
+
+For the measurable part, 
