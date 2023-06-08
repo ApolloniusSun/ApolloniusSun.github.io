@@ -1709,9 +1709,11 @@ Hence we reduce the case to $A_{n-2}$.
 
 
 
+## 7. Cluster Theory
+
 ### Frieze
 
-**$\{x_n\}$, $x_{n+1}=\dfrac{1+x_n}{x_{n-1}},x_1=a,x_2=b$** has a period 6.
+
 
 
 
@@ -1721,4 +1723,258 @@ Phenomenon 1. A lightingbolt (Path from Top to the Bottom) which are made up of 
 
 (Converse does not holds: Using (2,2,1,3))
 
-Phenomenon 2. All frieze is periodic under
+Phenomenon 2. All frieze is periodic under glide reflection, whose fundamental domain (the $\text{A}$, as shown below) is a regular triangle, thus with $n(n+3)/2$ non-top/bottom row elements. ($\text{A}\forall\text{A}\forall\text{A}\forall\text{A}\forall$)
+
+
+
+Call the period of the 1st non trivial row a quddity sequence.
+
+**Thm. (Conway-Coxeter) $\forall $ quiddity seqqene of height $n$ are precisely from**
+
+
+
+### Quiver mutation
+
+Recall the famailiar sequence **$\{x_n\}$, $x_{n+1}=\dfrac{1+x_n}{x_{n-1}},x_1=a,x_2=b$** has a period 5.
+
+**(Quiver) A directed graph without self-loop and 2-cycle(parallel opposite edge) is called a quiver.**
+
+Given a initial cluster $C=(Q,x)$, $x=(x_i,i\in Q_0)$. i.e. putting a variable on all vertices of the initial cluster.
+
+Mutation of $C$ at $k\in Q_0$
+
+Step1. $i\to k\to j\ then\ add\ i\to j$
+
+Step2. $i\to k$, then reverse the arrow. Here the change is made in modification, instead of adding.
+
+Step3. Kill all 2-cycle.
+
+Step4. Change the point value $x_i'=x_i(i\neq k), x_k'=x_k^{-1}(\prod_{i->k}x_i+\prod_{j->k}x_j)$
+
+**Lemma. $\mu_k^2=id$**
+
+
+
+Hence its easy to be shown that for a height-2 frieze, the zigzag line (middle 2 roows) are made exactly by conducting mutation on $x_1<-x_2$ . Hence easy to verify the periodic property.
+
+
+
+**Set up. Given a initial cluster $C=(Q,x)$, one can get all cluster from iteratedly mutation, (identify them if $\exists$ isomorphism $Q_1\to Q_2,x_1\mapsto x_2$)**
+
+A cluster variable is the variables(actually rational function resp. the initial variables) that appears in the cluster
+
+FACTS: 1. Any cluster variable is a Laraunt Polynomial. i.e. $x=\dfrac{Polynomial}{\prod x_i^{d_i}}$; 2. Coefficient of the polynomial $P(x)$ is non-negative.
+
+
+
+**Def. Cluster Exchange Graph$:vertex-> cluster;Edge->Mutation$**
+
+Thus the $CEG$ of $x_1->x_2$ is exactly a pentagon.
+
+**Thm. (Fomin-Zelevinsky)**
+
+TFAE:
+
+$|CEG(Q)|<+\infty$;
+
+$Q$ is mutation equivalent to a Dynkin graph, i.e. you can turn the graph into a dynkin one by some steps of mutations;
+
+Any $Q'$ mutated from $Q$ has no double arrow.(Parallel Arrow)
+
+
+
+**Type $A_n$ cluster $\iff$ Frieze(generalized)**
+
+At this time, the cluster variables are $n(n+3)/2$
+
+$A_2$ example has been showned previously, now we compute the $A_3$ case.
+
+### Associahedron, Catalan Numbers, Triangulation of $(n+3)-$gon
+
+Consider ways of adding (), each () only involve two parts. Say vertices to be the ways of adding n ()s on n+2 elements, connect a edge if the ways can be transformed by using associative law for 1 time, we get a graph. Call this graph a associahedron.
+
+(The famous pentagon is the associahedron for $n=2$, i.e. $abcd$) 
+
+This problem has another name: Effective parenthesis.
+
+**Binary Tree. A tree with $n+2$ leaves, any vertices has exactly 2 branches unless it reach the leaves.**
+
+Any tree corresponds to the way of multiplying the $n+2$ variables.
+
+**$C_m=\dfrac{1}{m}{2m\choose m+1}=\dfrac{1}{2\pi}\int_0^4 x^m\sqrt{\dfrac{4-x}{x}}dx\\=\dfrac{2}{\pi}4^m\int_{-1}^1 t^{2m}\sqrt{1-t^2}dt$**
+
+Thus $\sum_{m=0}^{+\infty} C_m/2^{2m+1}=1\\$
+
+Proof: $C(x)=\sum C_mx^m$, $C(x)=1+xC(x)^2$, $C(x)=\dfrac{1-\sqrt{1-4x}}{2x}$
+
+Expanding it using generalized bionomial theorem.
+
+$\dfrac{2}{\pi}\cdot4^m\cdot\int_{-1}^{1}t^{2m}\sqrt{1-t^2}dt=\dfrac{4^{m+1}}{\pi}\int_0^{\pi/2}\sin^{2m}\theta\cos^2\theta d\theta\\=\dfrac{(2m-1)!!}{m!}$
+
+$\sum_{m=0}^{+\infty}C_m/2^{2m+1}=\dfrac{1}{\pi}\int_{-1}^{1}\dfrac{dx}{\sqrt{1-x^2}}=1\\$
+
+Probability Explaination:
+
+Consider a random walk from 0. Each step choose +1/-1 at probability 1/2. View -1 as a trapped state, then $1=\sum C_m/2^{2m+1}=P(arriving\ at\ 1)$
+
+Since 1-dimensional random walk is always recurrent, then the $P$ should be 1.
+
+
+
+**$C_{n+1}=\#BT_{n+2}$**
+
+See Notes.
+
+For any elements in $BT_{n+2}$, we view it as a series of $n+1$ pairs of parenthesis and $n+2$ variables $a_1,\cdots, a_{n+2}$, where each parenthesis contains 2 blocks. (For example $(a(bc))$ is a proper series)
+
+We view left parenthesis "(" as "+", variables "$a_i$" as "-"($i\neq n+2$). Then we get a "+","-" sequence which satisfies #"+" in first $k$ elements are no less than #"-".
+
+Thus we get a map: $BT_{n+2}\to C_{n+1}$
+
+For the inverse direction, given a sequence of "+" and "-", we first write the $a_1,\cdots,a_n$ and left parenthesis by view "+" as "(", "-" as "$a_i$", and add $a_{n+2}$ at the end. Then we add right parenthesis so that each pair of parenthesis only contain 2 blocks. This can be completed uniquely since we can add right parenthesis from the right of the sequence. The adding method is also unique since each pair must contain 2 blocks. 
+
+These two operations are indeed inverse. Thus we get the result.
+
+
+
+
+
+**Definition. A triangulation of $\mathbb{S}=(n+3)-$gon is a collection of diagnols that divide $\mathbb{S}$ into triangles.**
+
+Similar to the associahedron, for triangulation we get a exchange graph where vertices are triangulation, edges are flip. We get a Graph $EG(\mathbb{S})$
+
+
+
+**Theorem. $|EG(\mathbb{S})|=C_{n+1}$**
+
+Proof: For the $n+3$-gon, fix an edge, and view the other $n+2$ edges as $n+2$ variables, the diagnols can be viewed as the ways of conducting multiplications. Thus it has a correspondonce with $BT_{n+2}$. Thus the theorem is trivial.
+
+Taking midpoints of edges and diagnols, we immediately get an binary tree which is exactly the binary tree in the previous correspondonce!
+
+
+
+**Theorem. $\forall$ Quddity of frieze of height $n$, it arises from a triangular $T$, where $a_{i}$ is the angle of $T_i$**
+
+
+
+**Lemma. $(m+2)C_{m+1}=2(2m+1)C_m$**
+
+**Theorem. Exists a bijection: $\{cluster\ variables\}\leftrightarrow \{diagonols\}$, such that exchange relation becomes Ptolemy relation.**
+
+**Moreover, variable on the diagonol $i\leftrightarrow j$ has the form $\Z^+[x_j,y_i]/\prod_{t<k<s}x_k$**
+
+Remark. For the meaning of $y_i$, Since the 1s in the frieze are actually edges of the polyton. Thus one can replace $1s$ with $y_i$s temporarily.
+
+Proof: Given  $x_1,\cdots,x_n$ whereas the diagonals have a common point. We claim that $\exists!$ clusters forall diagonals such that Ptolemy relations are satisfied.
+
+It suffices to discribe how quiver corresponds to the diagonals. However this is obvious since mutate at a point (or to say at a diagonal) is equivlant to conduct a fliping operation. The variable changes are exactly satisfying the Ptolemy relation. (Through a local check)
+
+Thus all clusters mutated from $A_n$ are exactly triangulation of the polygon.
+
+
+
+Thus the rest is to say given a set of edge variable and the initial variables. This is an elementary result however. One can easily deduced it by induction.
+
+
+
+Corollary. This bijection induces $EG(S)\cong CEG(S)$.
+
+Corollary. $\forall$ general freize comes from cluster algebra of type $A_n$ (in the sense that $\begin{matrix}01&&12&&23&&34&&45&&56\\&02&&13&&24&&35&&46\\&&03&&14&&25&&36\\&&&04&&15&&26\\&&&&05&&16\\&&&&&06\end{matrix}$, here $ij$ denotes the diagonal numebr of $i\longleftrightarrow j$)
+
+Corollary.(Conway-Coexter) $\exists $ bijection between $EG(S)$ and the integral frieze of height $n$.
+
+Proof: Given a $T\in EG(S)$
+
+$V_{st}=\#matchings\ of\ \{(V_k\in\triangle^k,\ for\ each\ s<k<t\},such\ that\ \triangle^k\in T$
+
+Lemma. $V_{st}=V_{ts}$. Checking that the complement mathcing satisfies the desired case.
+
+Lemma. $V_{st}$ satisfies the Ptolemy relation.
+
+Lemma. $\forall$ quddity of an integral frieze, $\exists 1$.
+
+Take the largest $V_{st}$, consider the edges $V_{s(t+1)},V_{s(t-1)}$, then $V_{(t+1)(t-1)}=(V_{s(t+1)}+V_{s(t-1)})/V_{st}\leq 2$. If the value equals 2. Then $V_{s(t+1)}=V_{s(t-1)}=V_st$, suppose no 1 exists, then all $V_{sx}=V_{st}$, contradiction.
+
+Lemma.(Buliding) If $\exists 1$ on the quddity, i.e. $a_i=1$, then exists a quddity by deleting $a_i$, then exists a quddity $a_1,\cdots,a_{i-1}-1,a_{i+1}-1,\cdots,a_n$. (The idea is deleting a corner of the polygon $S$)
+
+Lemma.(Gluing) We can insert a $1$ in the quddity, the idea is adding the corner on the polygon.
+
+Lemma. If quiddity is $F(T)$ for some $T$, then the building is $F(\tilde T)$
+
+
+
+By lemmas above, the $V_{st}$ we constructed indeed induces a frieze.
+
+
+
+Now we prove the previous theorem. First we recall the description of Fomin-Zelevinsky theorem.
+
+**Thm. (Fomin-Zelevinsky)**
+
+TFAE:
+
+$|CEG(Q)|<+\infty$;
+
+$Q$ is mutation equivalent to a Dynkin graph, i.e. you can turn the graph into a dynkin one by some steps of mutations;
+
+Any $Q'$ mutated from $Q$ has no double arrow.(Parallel Arrow)
+
+
+
+Proof: If a parallel arrow exists, through elementary check one can get it's impoosible to get the $\mu_1\rightrightarrows \mu_2$ back again.
+
+If a graph is not Dynkin, there must exists a Euclidean graph as subgraph. Through direct check one can get $\tilde{A_n},\tilde{D_n},\tilde{E_n}$ will induce a double arrow.
+
+(One should also check $D_n,E_n$ leads to a finite $CEG(Q)$.)
+
+
+
+## 8. Lines in surfaces
+
+A plane section of a conic is called a quadratic curve. It has a genereal form $Ax^2+Bxy+Cy^2+Dx+Ey+F=0$, or $x^TQx=0$.
+
+### Quadratic Surfaces
+
+For quadratic surfaces in $\mathbb{C}P^3$, it is always projectivly equivalent to $xy=zw$
+
+It is doubly ruled: $\{x=\lambda z;y=\lambda^{-1} w\}$ or $\{x=\lambda w;y=\lambda^{-1} z\}$
+
+For the converse, say $x=az+bw,y=cz+dw$, $(x,y,z,w)$ lie on the quadratic surface if and only if $ac=bd=0$, hence the result.
+
+
+
+### Cubic Surface
+
+#### Fermat Cubic $x^3+y^3+z^3+w^3=0$
+
+For the lines, wlog $\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}z\\w\end{pmatrix}$
+
+By solving this we get $x+\omega^jz=0;y+\omega^kw=0$, or cyclic the $x,y,z,w$.
+
+By computing we get each line intersect with 10 lines, have no intersection with 16 lines.
+
+We define $Conf(L)$: such that vertices are the lines, link a edge if they intersect.
+
+**Lem. $Sym(Conf(L))=W(E_6)$, where $W$ is the Weyl Group.**
+
+$W(Q)=<a_1,\cdots,a_n|a_i^2=1,a_ia_ja_i^{-1}a_j^{-1}=e(i\not\leftrightarrow j);a_ia_ja_i=a_ja_ia_j(i\leftrightarrow j)>$
+
+#### Clebsch Surface
+
+A surface in $\mathbb{C}P^4, \sum x_i^3=0\cap \sum x_i=0$
+
+Consider plane in the 3-manifold $\sum x_i^3$, and intersect it with the plane $\sum x_i=0$
+
+$L$ be the planes in the 3-manifold, $\zeta$ be the 5th-unit root. in which 15 $\tilde l:x_i=x_j;x_k=x_l$, 12 $\tilde l:\sum x_{n_i}\zeta^i=0,\sum x_{n_i}{\zeta^{-i}}=0$ .
+
+
+
+Let $\mathfrak m$ be all smooth cubic in $\mathbb{C}P^{19}$
+
+Then $\tilde{\mathfrak m}=\{(l,x )|a\ line\ in\ x\in\mathfrak m\}$ is a 2-cover of $\mathfrak m$.
+
+
+
+**Lemma. $\forall$ Cubic Surface $\cong $ blow-up of $\mathbb CP^2$ at 6 points.**
+
+$27=15(line\ passes\ through\ 6\ pt)+6(blow\ up\ of\ 6\ pt)+6(blow\ up\ of\ 6\ conics)$

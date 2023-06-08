@@ -154,7 +154,9 @@ $||G(y_1)-G(y_2)||=||x_1-x_2||\leq ||(x_1+\Psi(x_1))-(x_2+\Psi(x_2))||+||\Psi(x_
 
 于是$||x_1-x_2||\leq \dfrac{1}{1-\gamma}||y_1-y_2||$，从而说明了连续性。
 
-### 10.0 Preliminaries
+### 10. Fouriér Analysis
+
+#### 10.0 Preliminaries
 
 Prop. $1. f*g=g*f; 2. f*g\ continuous\ (as\ long\ as\ f,g\ integrable)$
 
@@ -184,7 +186,7 @@ Lem.Pf.
 
 
 
-### 10.1 Fouriér Series
+#### 10.1 Fouriér Series
 
 Definiton: $f:\R\to \R$, $2\pi-$periodic. $[-\pi,\pi]$上Riemman可积。
 
@@ -222,7 +224,7 @@ $\widehat{f*g}(n)=\dfrac{1}{2\pi}\displaystyle{\int_{-\pi}^\pi(f*g)(x)e^{-inx}\t
 
 
 
-### 10.2 Good Kernels - Féjer Theorem.
+#### 10.2 Good Kernels - Féjer Theorem.
 
 Given a series of kernel function ($2\pi-$periodic) satisfies the following:
 
@@ -259,7 +261,7 @@ Unfortunately Dirichlet Kernel is not a good kernel. $\int_{-\pi}^{\pi} |K_n(x)|
 
 
 
-### 10.3 $L^2$逼近
+#### 10.3 $L^2$逼近
 
 定义$<f,g>=\dfrac{1}{2\pi}\int_{-\pi}^{\pi} f(t)\overline{g}(t)\text{d}t\\$，其中$f,g: 2\pi$-periodic,$[-\pi,\pi]\to \C$，$||f||_{L^2}:=<f,f>^{1/2}$.
 
@@ -303,7 +305,7 @@ $<f-S_Nf,S_Nf-g>=0$，于是得证。
 
 **（Riemann-Lebesgue定理）$\hat{f}(N)\to 0$**
 
-### 10.4 点态收敛
+#### 10.4 点态收敛
 
 
 
@@ -311,9 +313,9 @@ $<f-S_Nf,S_Nf-g>=0$，于是得证。
 
 
 
-### 12.1 Applications of Fourier series
+#### 12.1 Applications of Fourier series
 
-#### **Weyl Equidistribution Thm.**
+##### **Weyl Equidistribution Thm.**
 
 Given an irrational number $\gamma$, $\xi_n= <n\gamma>:=n\gamma-[n\gamma]$. It is reasonable to guess that $\xi_n$ distribute equally over the interval $[0,1)$.
 
@@ -405,7 +407,7 @@ Thus we get the result.
 
 
 
-#### **Heat Equation on a circle**
+##### **Heat Equation on a circle**
 
 Question: $\begin{cases}\part_t u=\part_{xx} u\\u(0,x)=f(x)\end{cases}$, $u\ C^1$ over $t, C^2$ over $x$, periodic on $x$.
 Solution: **Step 1. Separation of variable: Suppose $u(t,x)=A(t)B(x)$, with $A,B\neq 0$**
@@ -423,11 +425,11 @@ To obtain the boundary condition, it is easy to verify that $c_n=\hat{f}(n)$.
 
 
 
-
+### 13. Measure Theory
 
 Following Contents are Real Analysis Parts.
 
-### 13.1 Measure
+#### 13.1 Measure
 
 **Definition. ($\sigma-$algebra)  $\mathcal{F}\subseteq P(E)$ is a $\sigma-$algebra over the set $E$ if it satisfies the following 3 conditions.**
 
@@ -477,11 +479,11 @@ Through this construction (and using some conclusions of Caratheodory-Hahn Thm.)
 
 **4. $B_n\supseteq B_{n+1}$, $\mu(B_1)<+\infty$, $\mu(\cap_{n=1}^{+\infty}B_n)=\lim_{n\to+\infty}\mu(B_n)$**
 
-**5. $\mu(\cup_{n=1}^{+\infty} A_n)=\sum_{n=1}^{+\infty}\mu(A_n)$**
+**5. $\mu(\cup_{n=1}^{+\infty} A_n)\leq\sum_{n=1}^{+\infty}\mu(A_n)$**
 
 
 
-### 13.2 Integration
+#### 13.2 Integration
 
 $f(x)=\sum_{i=1}^n\alpha_i\mathbb{1}_{A_i}$, $A_i\in\mathcal{F}$, disjoint.
 
@@ -508,3 +510,330 @@ Remark. Say $f$ integrable if $\displaystyle{\int |f|\text{d}\mu<+\infty}$, then
 Proof: $\int_L=\int_R$ if we use step functions as the simple functions. Using Upper sums and Lower sums immediately leads to the result.
 
 For the measurable part, 
+
+
+
+
+
+
+
+### 14. Probability
+
+We use Kolomogrov axiom to define the probability.
+
+A probability space consists of $(\Omega,\mathscr{F},\mathbb{P})$, where $\Omega$ is the hole space, $\mathscr{F}$ is a $\sigma-$algebra, and $\mathbb{P}$ a measure over it such that $\mathbb{P}(\Omega)=1$
+
+**(Independence of events) $\mathbb{P}(E_1\cap E_2)=\mathbb{P}(E_1)\mathbb{P}(E_2)$, then $E_1,E_2$ independent.**
+
+**More generally say a countable family of events $\{E_i\}_{i=1}^{+\infty}$ independent if $\mathbb{P}(\cap E_i)=\prod \mathbb{P}(E_i)$ holds for any sub family $E_i(i\in I)$**
+
+**(Condition Probability) For $A\in\mathscr{F}$, $\mathbb{P}(A)>0$, then for $E\in\mathscr{F}$, define the condition probability $\mathbb{P}(E|A)=\dfrac{\mathbb{P}(E\cap A)}{\mathbb{P}(A)}$**
+
+Through standard checking process this indeed defines a probability on $\mathscr{F}$
+
+
+
+Similar to sets, we have Product space by conducting cartesian product.
+
+
+
+**(Random Variables) A random variable is a measurable function $X:\Omega\to \mathbb{P}$**
+
+**(Discrete Random Variable) $\mathbb{P}(X=X_i)=P_i$, $X$ ranges on discrete countable points.**
+
+**(Independence of Random Variables) Given a family of random variables $(X_i)_{i\in I}$, they are independent if $\forall \alpha_1,\cdots,\alpha_n\in I$, $\forall F_{\alpha_1},\cdots,F_{\alpha_n}\in B(\mathbb{R})$, we have $\mathbb{P}(\cap \{X_{\alpha_i}\in F_{\alpha_i}\})=\prod\mathbb{P}(\{X_{\alpha_i}\in F_{\alpha_i}\})$**
+
+**(Expectation) $E(X)=\int X\text{d}\mathbb{P}$**
+
+**(Variance) $Var(X)=E((X-E(X))^2)=E(X^2)-E(X)^2$**
+
+**Prop. If $X_1,\cdots,X_n$ are independent random variables, then $Var(\sum X_i)=\sum Var(X_i)$**
+
+Proof: $LHS=E[(\sum x_i)^2]-(\sum E[x_i])^2=\sum(E[x_i^2]-(E[x_i])^2)+\sum (E[x_ix_j]-E[x_i]E[x_j])=RHS$
+
+Examples for discrete random variables.
+
+Bernoulli $X\in\{0,1\}$, $P(X=1)=p;P(X=0)=1-p$
+
+Binomial
+
+ $\mathbb{P}(X=k)={n\choose k} p^k(1-p)^{n-k}$
+
+$\sum^n Bernoulli(p) \sim Binomial(n,p)$, $E(Binomial (n,p))=nE(Bernoulli(p))=np$
+
+
+
+Geometry 
+
+$\mathbb{P}(X=k)=(1-p)^{k-1}p$, $E(X)=1/p$
+
+Poisson
+
+$\mathbb{P}(X=k)=e^{-\lambda}\cdot \dfrac{\lambda^k}{k!}$, $E(X)=Var(X)=\lambda$
+
+
+
+**Markov Inequality $\mathbb{P}(|x|>\lambda)\leq \dfrac{1}{\lambda}E(|x|)$**
+
+This is exactly same to the Chebyshev inequality in the real analysis case.
+
+**Weak LLN**
+
+$X_i$ i.i.d.$\to X$, $\sum X_n/N\to(under\ probability) E[X]$
+
+Proof: $\mathbb{P}[|S_n-E[X]|\geq\varepsilon]=\mathbb{P}[(S_n-E[S_n])^2\geq \varepsilon^2]\\\leq E[(S_n-E[S_n])^2]/(\varepsilon^2)=(iid)=\sum Var[X_n]/n^2\leq C/n $
+
+
+
+
+
+### **15. Random Graph & Perrolation**
+
+Graph are defined to be 1-skeleton of a CW complex.
+
+#### 15.1 Erdos-Renyi Graph
+
+Model $G=G(n,P_n)$, with $n$ vertices. Sample i.i.d. Bernoulli random variables of parameter $P_n$. Connect $i,j$ if $X_{i,j}=1$, otherwise 0.
+
+**Connectivity**
+
+$P_n=1$, then $\mathbb{P}(G=K_n)=1$.
+
+**Connectivity Theorem. **
+
+**1. For $P_n\geq \dfrac{(1+\varepsilon)\log n}{n},\varepsilon>0$, then $\mathbb{P}(G(n,p)\ is\ connected)\xrightarrow{n\to+\infty}1$**
+
+**2. For $P_n\leq \dfrac{(1-\varepsilon)\log n}{n},\varepsilon>0$, then $\mathbb{P}(G(n,p)\ is\ connected)\xrightarrow{n\to+\infty}0$**
+
+We call case 1 "supercritical"(超临界), case 2 "subcritical"(次临界)
+
+In this case $\dfrac{\log n}{n}$ here is the critical situation.
+
+Proof:
+
+
+
+**Lemma 1. (Isolated point) **
+
+**For $P_n\geq \dfrac{(1+\varepsilon)\log n}{n}$, $\mathbb{P}(G(n,p)\ has\ isolated\ point)\xrightarrow{n\to+\infty}0$**
+
+Lemma 1 Proof:
+
+$\text{\color{red} First\ Moment Method\ (Mean/Expectation): 一阶矩方法}$
+
+$\mathbb{P}(\#isolated\ vertices\ of\ G(n,p)\geq1)\leq \mathbb{E}(\#isolated\ vertices)$
+
+To compute the last term, we observe that $\#isolated\ vertices=\sum_{i=1}^{n}\mathbb{1}_{i\ is\ isolated}$
+
+Thus $\mathbb{E}(\#isolated\ vertices)=\sum_{i=1}^n\mathbb{E}(\mathbb{1}_{i\ is\ isolated})=\sum_{i=1}^{n}\mathbb{P}(i\ is\ isolated)$
+
+
+
+Now For any single point $i$, $\mathbb{P}(i\ is\ isolated)=\mathbb{P}(X_{i,t}=0\quad\forall t\neq i)=(1-P_n)^{n-1}$
+
+Hence:
+
+ $\mathbb{E}(\#isolated\ vertices)=n(1-P_n)^{n-1}\leq n(1-\dfrac{(1+\varepsilon)\log n}{n})^{n-1}\\\leq n(e^{-\dfrac{(1+\varepsilon)\log n}{n}})^{n-1}\leq n^{1-(1+\varepsilon)(n-1)/n}\xrightarrow{n\to+\infty}0 $
+
+We get a conclusion $\color{red} n(1-P_n)^n\simeq n^{-\varepsilon}$.
+
+
+
+**Lemma 2. (Isolated point)**
+
+**For $P_n\leq \dfrac{(1+\varepsilon)\log n}{n}$, $\mathbb{P}(G(n,p)\ has\ isolated\ point)\xrightarrow{n\to+\infty}1$**
+
+Lemma 2 Proof:
+
+$\text{\color{red} Second\ Moment Method\ (Variance): 二阶矩方法}$
+
+Denote $X=\# \{isolated\ vertices\}$, then $\mathbb{P}(X\geq 1)\geq \dfrac{\mathbb E^2(X)}{\mathbb E(X^2)}$(Cauchy-Schwartz)
+
+Since $\mathbb E(X^2)=\mathbb E\left((\sum\mathbb1_{i\ is\ isolated})^2\right)=\sum\mathbb{E}(\mathbb 1_{i\ is\ iolated})+\sum\mathbb{E}(\mathbb 1_{i,j\ both\ are\ isolated})$
+
+The first sum is $n(1-P_n)^{n-1}$, second sum is $n(n-1)(1-P_n)^{2n-3}$(through elementary combinatorics)
+
+Thus $\dfrac{\mathbb E^2(X)}{\mathbb E(X^2)}=[n^2(1-P_n)^{2n-2}]/[n(n-1)(1-P_n)^{2n-3}+n(1-P_n)^{n-1}]\to 0$
+
+
+
+**Main Proof of Part 1.**
+
+$\mathbb{P}(G\ isn't\ connected)=\mathbb{P}(\exists cut\ V_1\sqcup V_2)\\\leq\mathbb{P}\cup_{k=1}^{[n/2]}(\exists cut,|V_1|=k,\ no\ edges\ between\ V_1,V-V_1)\\\leq\sum_{k=1}^{[n/2]}{n\choose k}(1-P_n)^{k(n-k)}$
+
+Since $P_n$ is monotonic w.r.t. $\varepsilon$, it is possible to let $\varepsilon$ be arbitarily small.
+
+Condition: $n>>1$.
+
+Since ${n\choose k}(1-P_n)^{k(n-k)}={\color{red}\dfrac{n!}{(n-k)!}(1-P_n)^{kn}}{\color{blue}\dfrac{1}{k!}(1-P_n)^{-k^2}}\simeq{\color{red}n^{^k}\cdot(1-P_n)^{nk}}{\color{blue}(k/e)^{-k}e^{P_nk^2}}\\\simeq{\color{red}n^{-\varepsilon k}}{\color{blue}(k/e)^{-k}e^{(1+\varepsilon)k^2\log n/n}}\\\leq \exp(-\varepsilon k\log n-k\log (k/e) + (1+\varepsilon)k^2\log n/n)$
+
+$=\exp(-k[\varepsilon \log n+\log(k/e)-(1+\varepsilon)(k/n)\log n])$
+
+If $k\leq \dfrac{\varepsilon}{2}n$, $\varepsilon \log n-(1+\varepsilon )(k/n)\log n\geq \varepsilon/3 \cdot \log n$
+
+If $n/2\geq k\geq \varepsilon n/2$, $\varepsilon \log n+\log(k/e)-(1+\varepsilon )(k/n)\log n\geq\log((\varepsilon n)/(2e))-(1+\varepsilon)/2\cdot\log n\\=(1-\varepsilon)/2\cdot\log n+\log [\varepsilon /(2e)]>(\log n)/3$
+
+Thus $\mathbb P(G\ isn't\ connected)\leq \sum e^{-k[\varepsilon \log n+\log(k/e)-(1+\varepsilon)(k/n)\log n]}\\\leq \sum_{k=1}^{+\infty} n^{-\varepsilon k/3}+\sum_{k=[\varepsilon n/2]}^{+\infty} n^{-k/3}=n^{-\varepsilon/3}/(1-n^{-\varepsilon/3})+n^{-\varepsilon n/6}/(1-n^{-1/3})\xrightarrow{n\to+\infty}0 $
+
+
+
+**Proof of Part 2.**
+
+Directlty deduced from Lemma 2.
+
+
+
+#### 15.2 Bernoulli Percolation
+
+**Definition. (Bernoulli Percolation: 伯努利渗流模型) Given a graph $G=(V,E)$, associate every $e\in E$ with an independent Bernoulli Random variable $\omega (e)$ with the parameter $p$**.  (This is called the distribution of a percolation configuration)
+
+**Given the percolation configuration distribution, we define a new random graph $G=(V,\mathcal{E})$, where for every $e$, $e\in \mathcal{E}\iff \omega(e)=1$, call the edge open, otherwise closed.**
+
+Erdos-Renyi graph, particularly, is the case when taking $G=K_n$
+
+Remarks: Here the probability space is $(\{0,1\}^E,\mathcal{F}=Events\ generated\ by\ Finite\ Edges\ Events, \mathbb P_p)$
+
+
+
+Now we consider the Bernoulli Percolation on $\mathbb{Z}^d$, i.e. take $G=(\mathbb{Z}^d,E(\mathbb{Z^d}))$,  where $E(\mathbb{Z}^d)=\{(x,y)|dist(x,y)=1\}$.
+
+$\theta(p)=\mathbb P(0\longleftrightarrow \infty)=\mathbb P(\{\exists an\ infinite\ component\ containing\ 0\})$, where $(x\longleftrightarrow y)$ denote $x,y$ can be connected by a open path. 
+
+Here $(0\longleftrightarrow \infty)=\cap_{n\geq 1} (0\longleftrightarrow \part\Lambda_n)$, where $\Lambda_n$ is the square $[-n,n]^d$, hence a finite edge event, hence $(0\longleftrightarrow\infty)$ indeed exists in the event domain.
+
+Call the component containg 0 $C(0)$ the cluster containing 0.
+
+
+
+We would like to consider the critical probability in which $\theta(p)$ changes from 0 to non-0 values.
+
+**Prop 1.(Lower case) $\forall d\in \mathbb{N}_+, \exists \tilde p(d)$, such that $p\leq \tilde{p}(d)\implies \theta(p)=0$**
+
+Proof: Since $(0\longleftrightarrow\infty)=\cap_{n\geq 1} (0\longleftrightarrow\part\Lambda_n)$, it is also a descending chain, thus $\mathbb P(0\longleftrightarrow\infty)=\lim_{n\to \infty} (0\longleftrightarrow \part\Lambda_n )$
+
+For each $n$,
+
+ $\mathbb{P}(0\longleftrightarrow \part \Lambda_n)\leq \sum_{k\geq n}\mathbb P(\exists length\ k-open\ path:0\longleftrightarrow\part\Lambda_n)\\\leq\sum_{k\geq n}p^k\cdot (\#length\ k-open\ path:0\longleftrightarrow\part\Lambda_n)\\\leq\sum_{k\geq n} p^k\cdot(2d)^k=(2dp)^n\cdot\dfrac{1}{1-2dp}$
+
+Take $p<1/(2d)$, we get the result. Thus $\widetilde p(d)=1/(2d)-\varepsilon$ is a suitable choice. 
+
+
+
+**Prop 2.(Upper case) $\forall d\geq 2$, $\exists \tilde{\tilde {p}}(d)\in(0,1), p\geq \tilde{\tilde p}(d)\implies \theta(p)>0$**
+
+Proof: Similarly we have $\mathbb{P}(0\longleftrightarrow\infty)=1-\mathbb{P}(0\not\longleftrightarrow\infty)=1-\lim_{n\to\infty}\mathbb{P}(0\not\longleftrightarrow \part \Lambda_n)$
+
+It suffices to prove that for $p>\tilde{\tilde p}, \mathbb{P}(0\not\longleftrightarrow \part \Lambda_n)\leq c\in (0,1)$
+
+$\mathbb{P}(0\not\longleftrightarrow\part\Lambda_n)=\mathbb{P}(\exists a\ open\ dual\ hyperplane\ separating\ 0\ and\  \part\Lambda_n)\\\leq\sum_{k\geq 2d}\mathbb{P}(\exists a\ size-k\ hyperplane\ separating\ 0\ and\ \part\Lambda_n)\\\leq\sum_{k\geq 2d}c(d)^k(1-p)^k=\dfrac{[c(d)(1-p)]^{2d}}{1-[c(d)(1-p)]}$
+
+Take a rather large $p$, (near to 1), we can let $\mathbb{P}(0\not\longleftrightarrow\part \Lambda_n)$ be controlled by a rather small value.
+
+
+
+**Prop 3.(Monotonicity) $\theta(p)$ is increasing.**
+
+Proof: Define a event $A$ is increasing, if $\omega\in A$, $\omega'\geq \omega$, then $\omega'\in A$. Where $\omega,\omega'\in\{0,1\}^{E}$, $\omega'\geq\omega$ if for all components we have the same greater relation.
+
+We claim if $A$ is increasing, $p<p'$, $\mathbb{P}_p(A)\leq \mathbb{P}_p(A')$
+
+Proof: 
+
+$\text{\color{red}Coupling Method:耦合方法}$.
+
+Given 2 probability space $(\Omega_1,\mathcal F_1,\mathbb P_1),(\Omega_2,\mathcal F_2,\mathbb P_2)$
+
+Construct a new probability space $(\Omega_1\times\Omega_2,\mathcal{F_1}\otimes\mathcal{F_2},\tilde{\mathbb{P}})$, such that
+
+ $\tilde{\mathbb{P}}(A_1\times \Omega_2)=\mathbb{P}_1(A_1)$
+
+$\tilde{\mathbb{P}}(\Omega_1\times A_2)=\mathbb P_2(A_2)$.
+
+Note that product space is a coupling space.
+
+$\text{\color{red}Stochastic domination}$
+
+Given 2 real value random variable $X_1\in(\Omega_1,\mathcal F_1,\mathbb P_1),X_2\in(\Omega_2,\mathcal F_2,\mathbb P_2)$
+
+We construct a coupling space such that $\tilde{\mathbb P}(X_1\leq X_2)=1$.
+
+
+
+For example, consider 2 coin toss with front face probability $p_1,p_2$, resp.
+
+We sample a uniform distributed random variables $U\stackrel{distribution}\sim Unif([0,1])$
+
+Let $X_1=\mathbb{1}_{U\leq P_1}$, $X_2=\mathbb{1}_{U\leq P_2}$, then $X_1\leq X_2$.
+
+
+
+Back to the proposition:
+
+Take i.i.d. random variables which distributed uniformly on $(0,1)$. $\{U_e,e\in E(\mathbb{Z}^d)\}$
+
+Take $\omega_p(e)=\mathbb 1_{\{U_e\leq p\}}$, 
+
+Then clearly $\omega_p\sim \mathbb{P}_p$, $\omega_p\leq \omega_{p'}$ if $p<p'$. Thus $\mathbb{P}_p[A]=\tilde{\mathbb{P}}[\omega_p\in A]\leq \tilde{\mathbb{P}}[\omega_p'\in A]=\mathbb{P}_{p'}[A]$
+
+
+
+**Theorem. (Phase Transition) $d\geq 2$, $\exists p_c(d)\in (0,1)$, such that $p<p_c\implies \theta(p)=0;\\p>p_c\implies \theta(p)=1$**. 
+
+More particularly, when $d=2,or \ d\geq 11$, $\theta(p_c)=0$; when $3\leq d\leq10$, determine $\theta(p_c)$ value is a Fields-Medal-Level Work.
+
+
+
+**Lem. $p\to\theta(p)$ is right-continuous.**
+
+
+
+**Thm. Kolmogrov 0-1 law**
+
+
+
+### 16. Markov Chain
+
+
+
+**Definition. (Markov Chain) Let $(\Omega,\mathcal F,\mathbb P)$ be a probability space, with a series of random variables $(X_n)_{n\in\mathbb N}$. **
+
+**We call the series a Markov Chain if $\mathbb{P}(X_{n+1}\in E_{n+1}|\cap_{1\leq i\leq n}(X_{i}\in E_i))=\mathbb{P}(X_{n+1}\in E_{n+1}|X_n\in E_n)$ holds for all $E_i\in Borel(\mathbb{R})$. (i.e. only the present state matters)**
+
+
+
+E.g. If $\mathbb{P}(X_{n+1}\in E_{n+1}|\cap_{1\leq i\leq n}(X_i\in E_i))=\mathbb{P}(X_{n+1}\in E_{n+1}|(X_n\in E_n)\cap(X_{n-1}\in E_{n-1}))$
+
+Then $Y_n=(X_n,X_{n-1})$ $(\Omega^2\to \R^2)$ is a $\mathbb{R}^2-$valued random variable. 
+
+Hence $\mathbb{P}(Y_{n+1}\in E_{n+1}\times E_n|Y_i)=\mathbb{P}(Y_{n+1}\in E_{n+1}\times E_n|Y_n\in E_{n}\times E_{n-1})$, and indeed the sigma closure of $Borel(\mathbb{R})^2$ is $Borel(\mathbb{R}^2)$,  thus a markov chain.
+
+
+
+**Definition. (Homogeneous Markov Chain; Transition Matrix) A countable state markov series is times homogeneous if $\mathbb{P}(X_{n+1}=x_{n+1}|X_n=x_n)=Q_{x_n,x_{n+1}}$ **
+
+Here the matrix $Q$ is a fixed matrix. 
+
+Remark. $\forall x,\sum_y Q_{x,y}=1 $
+
+
+
+**Prop. $(X_n)$ times homogeneous Markov Chain with transition matrix $Q$, $X_0\stackrel{d}\sim Q$, then $Q,\mu$ determine the distribution of the markov chain $X_n$**
+
+Proof: By induction and using the transition matrix.
+
+$\mathbb{P}(X_0=x_0,X_1=x_1,\cdots,X_n=x_n)$
+
+$=\mathbb{P}(X_n=x_n|X_0=x_0\cap \cdots\cap X_{n-1}=x_{n-1})\cdot \mathbb{P}(X_0=x_0,\cdots,X_{n-1}=x_{n-1})\\=Q_{x_{n-1},x_n}\cdot\mathbb{P}(X_0=x_0,\cdots,X_{n-1}=x_{n-1})\\=\cdots=\mu_{x_0}\cdot Q_{x_0,x_1}\cdots Q_{x_{n-1},x_n}$
+
+**Corollary. $\mathbb{P}(X_n=x_n)=(\mu Q^n)_{x_n}$**
+
+
+
+### Simple Random Walk on Graph
+
+**Definition. (SRW on Graph) $G=(V,E), \deg V<+\infty$, a SRW on $G$ is a markov chain s.t. $\mathbb{P}(X_{n+1}=\nu|X_n=\mu)=\dfrac{1}{\deg (\mu)}\mathbb{1}_{\mu\sim\nu}$**
+
+Note $\mathbb P_x$ denotes the markov chain starting from point $x$.
+
+Prop. $f_n(x)=\mathbb{E}_x[f(X_n)]$, then $f_n(x)=(Q^nf)(x)$
+
