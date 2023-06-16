@@ -425,6 +425,12 @@ To obtain the boundary condition, it is easy to verify that $c_n=\hat{f}(n)$.
 
 
 
+#### 16.2 Fourier Transform
+
+
+
+
+
 ### 13. Measure Theory
 
 Following Contents are Real Analysis Parts.
@@ -835,5 +841,10 @@ $=\mathbb{P}(X_n=x_n|X_0=x_0\cap \cdots\cap X_{n-1}=x_{n-1})\cdot \mathbb{P}(X_0
 
 Note $\mathbb P_x$ denotes the markov chain starting from point $x$.
 
-Prop. $f_n(x)=\mathbb{E}_x[f(X_n)]$, then $f_n(x)=(Q^nf)(x)$
+Prop. $f_n(x)=\mathbb{E}_x[f(X_n)]$, then $f_n(x)=(Q^nf)(x)$. $f:V\to \mathbb{R}$.
 
+Prop. $f_{n+1}-f_n=L f_n$, where $L$ is defined to be $(Q-I)$.
+
+$Lf_n=\sum_{y,y\sim x}Q_{x,y}(f(y)-f(x))$
+
+Remark. Note the astonishing relation between the previous proposition and the discrete heat equation, we can establish an amazing method to solve the heat equation numerically.

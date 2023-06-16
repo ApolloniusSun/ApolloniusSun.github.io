@@ -11,7 +11,7 @@ Reference Book: Atiyah - Introduction to Commutative Algebra.
 | PaRT                  | MaRkdown                                                     | PDF                                                          |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Part 1. Chapter 1~3.  | [Part 1](https://apolloniussun.github.io/#/CA-1)             | [PDF version](https://raw.githubusercontent.com/ApolloniusSun/ApolloniusSun.github.io/main/docs/CA/CA-1.pdf) |
-| Part 2. Chapter 4~5.  | [Part 2(Incompleted)](https://apolloniussun.github.io/#/CA-2) | Incompleted                                                  |
+| Part 2. Chapter 4~5.  | [Part 2(Incompleted)](https://apolloniussun.github.io/#/CA-2) | [PDF version](https://raw.githubusercontent.com/ApolloniusSun/ApolloniusSun.github.io/main/docs/CA/CA-1.pdf) |
 | Part 3. Chapter 6~8.  | Coming Soon                                                  | Coming Soon                                                  |
 | Part 4. Chapter 9~11. | Coming Soon                                                  | Coming Soon                                                  |
 
