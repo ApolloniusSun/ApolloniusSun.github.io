@@ -8,10 +8,10 @@ Remark: Unfortunately neither KaTeX nor MathJax can render commutative graphs, e
 
 Reference Book: Atiyah - Introduction to Commutative Algebra.
 
-| PaRT                  | MaRkdown                                         | PDF                                                          |
+| Part                  | Markdown                                         | PDF(Recommended)                                                          |
 | --------------------- | ------------------------------------------------ | ------------------------------------------------------------ |
-| Part 1. Chapter 1~3.  | [Part 1](https://apolloniussun.github.io/#/CA-1) | [PDF version](https://raw.githubusercontent.com/ApolloniusSun/ApolloniusSun.github.io/main/docs/CA/CA-1.pdf) |
-| Part 2. Chapter 4~5.  | [Part 2](https://apolloniussun.github.io/#/CA-2) | [PDF version](https://raw.githubusercontent.com/ApolloniusSun/ApolloniusSun.github.io/main/docs/CA/CA-2.pdf) |
+| Part 1. Chapter 1~3.  | [Part 1](https://apolloniussun.github.io/#/CA-1) | [PDF version](https://apolloniussun.github.io/#/CA-1p) |
+| Part 2. Chapter 4~5.  | [Part 2](https://apolloniussun.github.io/#/CA-2) | [PDF version](https://apolloniussun.github.io/#/CA-2p) |
 | Part 3. Chapter 6~8.  | Coming Soon                                      | Coming Soon                                                  |
 | Part 4. Chapter 9~11. | Coming Soon                                      | Coming Soon                                                  |
 
@@ -43,7 +43,7 @@ Reference Book: Royden Real Analysis 4th edition.
 
 [A summary of basic geometry I've learned.](https://apolloniussun.github.io/#/RudinC10) ; [PDF version](https://raw.githubusercontent.com/ApolloniusSun/ApolloniusSun.github.io/main/docs/Essays_pdf/RudinC10.pdf)
 
-(Originally intended to be written as notes for Baby Rudin Chapter 10; **Caution: May contain factual errors since the author knew nothing about algebra topology when writing this essay.** )
+(Originally intended to be written as notes for Baby Rudin Chapter 10; **Caution: May contain factual errors since the author knew nothing about algebraic topology when writing this essay.** )
 
 
 
