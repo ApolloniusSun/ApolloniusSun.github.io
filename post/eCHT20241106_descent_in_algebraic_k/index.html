@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Descent in algebraric K-theory | ApolloniusSun</title>
+<link rel="shortcut icon" href="https://apolloniussun.github.io/favicon.ico?v=1744727259788">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://apolloniussun.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Descent in algebraric K-theory | ApolloniusSun - Atom Feed" href="https://apolloniussun.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="Briefly outline Dustin Clausen's paper &quot;Descent in algebraic K-theory and a conjecture of Ausoni-Rognes&quot; arxiv..." />
+    <meta name="keywords" content="Small essays,Seminar notes" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://apolloniussun.github.io">
+  <img class="avatar" src="https://apolloniussun.github.io/images/avatar.png?v=1744727259788" alt="">
+  </a>
+  <h1 class="site-title">
+    ApolloniusSun
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/post/index" class="menu">
+          目录
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Descent in algebraric K-theory
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-12-02
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+                <a href="https://apolloniussun.github.io/tag/kclM6ftitA/" class="post-tag">
+                  # Small essays
+                </a>
+              
+                <a href="https://apolloniussun.github.io/tag/gbWC5F_2G0/" class="post-tag">
+                  # Seminar notes
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>Briefly outline Dustin Clausen's paper &quot;Descent in algebraic K-theory and a conjecture of Ausoni-Rognes&quot; <a href="https://arxiv.org/abs/1606.03328">arxiv.1606.03328</a> .</p>
+<p><a href="../../eCHT20241106_descent_in_algebraic_k.pdf">Descent in algebraic K-theory</a></p>
+<div style="text-align: center;">
+<iframe src="../../eCHT20241106_descent_in_algebraic_k.pdf" width="640" height="480" style="border:1px solid black;"></iframe>
+</div>
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://apolloniussun.github.io/post/basics-on-algebraic-k-theory/">
+              <h3 class="post-title">
+                Basics on algebraic K-theory
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank"> Gridea</a>
+  <a class="rss" href="https://apolloniussun.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
